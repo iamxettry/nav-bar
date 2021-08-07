@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 78px;
+  height: 100%;
+  padding: 6px 15px;
+  background-color: #11101d;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sidebar .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  height: 50px;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .logo i {
+  font-size: 25px;
+  padding-right: 12px;
+}
+
+.sidebar .logo h1 {
+  font-weight: 500;
+}
+
+.sidebar #btn {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.sidebar ul {
+  margin-top: 20px;
+}
+
+.sidebar ul li {
+  position: relative;
+  list-style: none;
+  color: white;
+  height: 50px;
+  width: 100%;
+  margin: 0 5px;
+  line-height: 50px;
+}
+
+.sidebar ul li i {
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.sidebar ul li input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 50px;
+  background: #1d1b31;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: white;
+  padding-left: 50px;
+}
+
+.sidebar ul li .fa-search {
+  position: absolute;
+  z-index: 555;
+  font-size: 20px;
+  color: white;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sidebar ul li .fa-search:hover {
+  background: #fff;
+  color: #11101d;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 12px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  white-space: nowrap;
+}
+
+.sidebar ul li a:hover {
+  background: #fff;
+  color: black;
+}
+
+.sidebar ul li a i {
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.sidebar ul li a .link-name {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar ul li .tooltip {
+  position: absolute;
+  top: 0;
+  height: 35px;
+  width: 122px;
+  left: 122px;
+  color: black;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 6px;
+  line-height: 35px;
+  text-align: center;
+  background: #fff;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  -webkit-transition: 0s;
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+}
+
+.sidebar ul li:hover .tooltip {
+  opacity: 1;
+  top: 50%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sidebar .profile-content {
+  position: absolute;
+  color: white;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.sidebar .profile-content .profile {
+  position: relative;
+  padding: 10px 6px;
+  height: 60px;
+  background: #1d1b31;
+}
+
+.sidebar .profile-content .profile .profile-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.sidebar .profile-content .profile .profile-details img {
+  height: 40px;
+  width: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+  margin-right: 10px;
+}
+
+.sidebar .profile-content .profile .profile-details .name {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.sidebar .profile-content .profile .profile-details .job {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.sidebar .profile-content .profile #log-out {
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.active {
+  width: 250px;
+}
+
+.active .logo {
+  opacity: 1;
+}
+
+.active #btn {
+  left: 90%;
+}
+
+.active ul li .tooltip {
+  display: none;
+}
+
+.active ul li a .link-name {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.active .profile-content .profile .profile-details {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.active .profile-content .profile #log-out {
+  left: 88%;
+}
+/*# sourceMappingURL=style.css.map */

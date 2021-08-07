@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d0c6f169e2.js" crossorigin="anonymous"></script>
+    <title>side bar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sidebar">
+        <!-- ----header---- -->
+        <div class="sidebar-content">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <h1>CodingHub</h1>
+            </div>
+            <i class="fas fa-bars " id="btn"></i>
+        </div>
+
+        <!-- ----items list--- -->
+        <ul>
+            <li>
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-th-large"></i>
+                    <span class="link-name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                    <span class="link-name">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-comment-alt"></i>
+                    <span class="link-name">Message</span>
+                </a>
+                <span class="tooltip">Message</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-chart-pie"></i>
+                    <span class="link-name">Analytic</span>
+                </a>
+                <span class="tooltip">Analytic</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-folder"></i>
+                    <span class="link-name">File Manager</span>
+                </a>
+                <span class="tooltip">Files</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cart-plus"></i>
+                    <span class="link-name">Order</span>
+                </a>
+                <span class="tooltip">Order</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-heart"></i>
+                    <span class="link-name">Saved</span>
+                </a>
+                <span class="tooltip">Saved</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span class="link-name">Setting</span>
+                </a>
+                <span class="tooltip">Setting</span>
+            </li>
+        </ul>
+        <!-- ---user info--- -->
+        <div class="profile-content">
+            <div class="profile">
+                <div class="profile-details">
+                <img src="profile.jpg" alt="">
+                    <div class="job-name">
+
+                        <div class="name">Raju chhetry</div>
+                        <div class="job">Web Developer</div>
+                    </div>
+                </div>
+                <i class="fas fa-sign-in-alt" style="transform: rotate(180deg);" id="log-out"></i>
+            </div>
+        </div>
+
+    </section>
+</body>
+<script>
+    const btn = document.getElementById("btn");
+    const sidebar = document.querySelector(".sidebar");
+    const searchbtn = document.querySelector(".fa-search");
+
+
+    btn.addEventListener("click", function(){
+        sidebar.classList.toggle("active");
+    })
+    searchbtn.addEventListener("click", function(){
+        sidebar.classList.toggle("active");
+    })
+</script>
+</html>
